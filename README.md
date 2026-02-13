@@ -34,7 +34,7 @@ Kita perlu menginstall alat-alat dasar seperti git, curl, dan text processing to
 ```sh
 apk update && apk upgrade
 apk add git curl grep sed fzf ncurses aria2
-
+```
 ### 2. Clone Script Ini
 Download script yang sudah dimodifikasi dari repository ini.
 
