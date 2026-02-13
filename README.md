@@ -34,3 +34,36 @@ Kita perlu menginstall alat-alat dasar seperti git, curl, dan text processing to
 ```sh
 apk update && apk upgrade
 apk add git curl grep sed fzf ncurses aria2
+
+### 2. Clone Script Ini
+Download script yang sudah dimodifikasi dari repository ini.
+
+```sh
+git clone [https://github.com/abdillahagil5/ani-cli-ios.git](https://github.com/abdillahagil5/ani-cli-ios.git)
+
+### 3. Pindahkan & Beri Izin Eksekusi
+Pindahkan file script ke folder sistem agar bisa dipanggil dari mana saja.
+```sh
+# Masuk ke folder hasil download
+cd ani-cli-ios
+
+# Pindahkan file utama ke /usr/bin
+cp ani-cli /usr/bin/ani-cli
+
+# Beri izin agar file bisa dijalankan (executable)
+chmod +x /usr/bin/ani-cli
+
+# (Opsional) Hapus folder mentahan instalasi biar hemat memori
+cd ..
+rm -rf ani-cli-ios
+
+### 🎬 Cara Pakai
+Setelah sukses install, kamu tinggal ketik perintah ini di terminal iSH kapan saja:
+```sh
+ani-cli
+
+##Panduan Navigasi:
+1. Ketik Judul: Masukkan judul anime (misal: one piece).
+2. Pilih Anime: Gunakan panah atas/bawah atau ketik nomor urutnya.
+3. Pilih Episode: Ketik nomor episode yang mau ditonton.
+4. Pilih Kualitas: Pilih resolusi (Best/1080p/720p).
