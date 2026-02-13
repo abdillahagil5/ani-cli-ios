@@ -68,3 +68,22 @@ ani-cli
 2. Pilih Anime: Gunakan panah atas/bawah atau ketik nomor urutnya.
 3. Pilih Episode: Ketik nomor episode yang mau ditonton.
 4. Pilih Kualitas: Pilih resolusi (Best/1080p/720p).
+
+###⚠️ PENTING: Saat Video Mulai
+Ketika script menemukan link video, iSH akan memunculkan pop-up notifikasi:
+#"Open in VLC?"
+👉 Kamu WAJIB memilih "Open" atau "Yes". Video akan otomatis terbuka di aplikasi VLC. Selamat menonton!
+
+###🛠️ Masalah Umum (Troubleshooting)
+1. Error sed: illegal byte sequence
+Jika muncul error aneh soal teks, jalankan perintah ini sekali saja:
+```sh
+export LC_ALL=C
+```
+2. Video tidak mau play di VLC
+Pastikan aplikasi VLC sudah terinstall dan kamu sudah mengizinkan iSH untuk membuka aplikasi lain (biasanya diminta saat pertama kali install).
+###🤝 Credits
+• Original Tool: pystardust/ani-cli
+• iOS Patch Maintainer: abdillahagil5
+
+Disclaimer: This tool simply scrapes links from public websites (Allmanga, etc). I do not host any content. Please support the creators by watching on official platforms if available in your region.
