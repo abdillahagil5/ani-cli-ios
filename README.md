@@ -53,7 +53,7 @@ cp ani-cli /usr/bin/ani-cli
 # Beri izin agar file bisa dijalankan (executable)
 chmod +x /usr/bin/ani-cli
 ```
-# (Opsional) Hapus folder mentahan instalasi biar hemat memori
+### (Opsional) Hapus folder mentahan instalasi biar hemat memori
 ```sh
 cd ..
 rm -rf ani-cli-ios
@@ -63,7 +63,7 @@ Setelah sukses install, kamu tinggal ketik perintah ini di terminal iSH kapan sa
 ```sh
 ani-cli
 ```
-## Panduan Navigasi:
+### Panduan Navigasi:
 1. Ketik Judul: Masukkan judul anime (misal: one piece).
 2. Pilih Anime: Gunakan panah atas/bawah atau ketik nomor urutnya.
 3. Pilih Episode: Ketik nomor episode yang mau ditonton.
@@ -72,7 +72,7 @@ ani-cli
 ### ⚠️ PENTING: Saat Video Mulai
 Ketika script menemukan link video, iSH akan memunculkan pop-up notifikasi:
 
-# "Open in VLC?"
+### "Open in VLC?"
 
 👉 Kamu WAJIB memilih "Open" atau "Yes". Video akan otomatis terbuka di aplikasi VLC. Selamat menonton!
 
