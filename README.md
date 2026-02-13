@@ -58,11 +58,57 @@ chmod +x /usr/bin/ani-cli
 cd ..
 rm -rf ani-cli-ios
 ```
-### 🎬 Cara Pakai
+## Membuat Wrapper VLC (agar bisa dibuka oleh vlc)
+
+### Langkah 1: Membuat "Fake VLC" Wrapper
+Kita akan membuat script bash kecil yang berpura-pura menjadi aplikasi VLC. Script ini akan menangkap URL video dari ani-cli, menambahkan prefix vlc://, dan melemparnya ke iOS.
+1. Buat file baru di /usr/local/bin bernama ios-vlc:
+```sh
+nano /usr/local/bin/ios-vlc
+```
+2. Tekan tombol paste (logo papan ujian dan kertas), lalu paste kode script berikut:
+```sh
+#!/bin/sh
+
+# Loop melalui semua argumen untuk mencari URL (biasanya diawali http)
+# ani-cli kadang mengirim flag lain, jadi kita harus filter URL-nya saja.
+for arg in "$@"; do
+    if echo "$arg" | grep -q "^http"; then
+        VIDEO_URL="$arg"
+        break
+    fi
+done
+
+if [ -z "$VIDEO_URL" ]; then
+    echo "Error: Tidak ditemukan URL video."
+    exit 1
+fi
+
+# Cetak info biar kelihatan keren
+echo "Membuka di VLC iOS..."
+echo "Target: $VIDEO_URL"
+
+# Panggil Python untuk menjembatani ke iOS via URL Scheme
+# Syntax: vlc://https://link-video.m3u8
+python3 -m webbrowser "vlc://$VIDEO_URL"
+```
+3. Simpan dan keluar: Tekan ^, lalu ketik C dan Enter.
+
+3. Berikan izin eksekusi (chmod):
+```sh
+chmod +x /usr/local/bin/ios-vlc
+```
+### 🎬Setting Default player
+Kita buat alias agar setiap kali ketik ani-cli, dia otomatis pakai player kita.
+```sh
+alias ani-cli='ani-cli -p ios-vlc'
+```
+### 📖 Cara Pakai
 Setelah sukses install, kamu tinggal ketik perintah ini di terminal iSH kapan saja:
 ```sh
 ani-cli
 ```
+
 ### Panduan Navigasi:
 1. Ketik Judul: Masukkan judul anime (misal: one piece).
 2. Pilih Anime: Gunakan panah atas/bawah atau ketik nomor urutnya.
