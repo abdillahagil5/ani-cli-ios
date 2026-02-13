@@ -63,21 +63,22 @@ Setelah sukses install, kamu tinggal ketik perintah ini di terminal iSH kapan sa
 ```sh
 ani-cli
 ```
-##Panduan Navigasi:
+## Panduan Navigasi:
 1. Ketik Judul: Masukkan judul anime (misal: one piece).
 2. Pilih Anime: Gunakan panah atas/bawah atau ketik nomor urutnya.
 3. Pilih Episode: Ketik nomor episode yang mau ditonton.
 4. Pilih Kualitas: Pilih resolusi (Best/1080p/720p).
 
-###⚠️ PENTING: Saat Video Mulai
+### ⚠️ PENTING: Saat Video Mulai
 Ketika script menemukan link video, iSH akan memunculkan pop-up notifikasi:
 
-#"Open in VLC?"
+# "Open in VLC?"
 
 👉 Kamu WAJIB memilih "Open" atau "Yes". Video akan otomatis terbuka di aplikasi VLC. Selamat menonton!
 
-###🛠️ Masalah Umum (Troubleshooting)
+### 🛠️ Masalah Umum (Troubleshooting)
 1. Error sed: illegal byte sequence
+
 Jika muncul error aneh soal teks, jalankan perintah ini sekali saja:
 ```sh
 export LC_ALL=C
@@ -86,7 +87,7 @@ export LC_ALL=C
 
 Pastikan aplikasi VLC sudah terinstall serta restart shell setelah install dan kamu sudah mengizinkan iSH untuk membuka aplikasi lain (biasanya diminta saat pertama kali install).
 
-###🤝 Credits
+### 🤝 Credits
 • Original Tool: pystardust/ani-cli
 • iOS Patch Maintainer: abdillahagil5
 
