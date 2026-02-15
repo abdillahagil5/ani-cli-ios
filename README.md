@@ -33,13 +33,13 @@ Kita perlu menginstall alat-alat dasar seperti git, curl, dan text processing to
 
 ```sh
 apk update && apk upgrade
-apk add git curl grep sed fzf ncurses aria2
+apk add git curl grep sed fzf ncurses aria2 nano
 ```
 ### 2. Clone Script Ini
 Download script yang sudah dimodifikasi dari repository ini.
 
 ```sh
-git clone [https://github.com/abdillahagil5/ani-cli-ios.git](https://github.com/abdillahagil5/ani-cli-ios.git)
+git clone https://github.com/abdillahagil5/ani-cli-ios.git
 ```
 ### 3. Pindahkan & Beri Izin Eksekusi
 Pindahkan file script ke folder sistem agar bisa dipanggil dari mana saja.
@@ -98,11 +98,7 @@ python3 -m webbrowser "vlc://$VIDEO_URL"
 ```sh
 chmod +x /usr/local/bin/ios-vlc
 ```
-### 🎬Setting Default player
-Kita buat alias agar setiap kali ketik ani-cli, dia otomatis pakai player kita.
-```sh
-alias ani-cli='ani-cli -p ios-vlc'
-```
+
 ### 📖 Cara Pakai
 Setelah sukses install, kamu tinggal ketik perintah ini di terminal iSH kapan saja:
 ```sh
